@@ -22,13 +22,13 @@ Just add `sp 1m` for a one-minute read or `sp ver` to verify the answer. Mix tin
 
 ## ⚡ Start in 30 seconds
 
-**1. Install** with [skills.sh](https://skills.sh) (works with Claude Code, Codex, Cursor and more):
+**1. Install** with any marketplace, like [skills.sh](https://skills.sh) (works with Claude Code, Codex, Cursor and more):
 
 ```bash
 npx skills add practicajs/spoon --skill spoon
 ```
 
-…or use your favorite marketplace ([Claude Code, Codex](#-install)).
+Prefer the Claude Code or Codex marketplace? [See Install](#-install).
 
 **2. Open your favorite AI editor**, type your question, then add `sp` and a token or two:
 
@@ -36,6 +36,8 @@ npx skills add practicajs/spoon --skill spoon
 - what are MCPs? **`sp 3s`** → 3 sentences
 - can iOS send notifications while the phone sleeps? **`sp ver`** → checked before it's sent
 - should we move to the cloud? **`sp 1m cr da`** → 1 minute, crystal clear, with data
+
+**3. Feel your brain breathe again.** 🧘
 
 Every answer ends with 🥄 and a short note on what your tokens did.
 
