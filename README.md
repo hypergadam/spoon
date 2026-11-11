@@ -6,9 +6,9 @@
 
 ## 🤔 I'm busy. What is it?
 
-spoon is a tiny skill that works on every major agent platform (Claude Code, Codex, Cursor and more). It takes seconds to start with and is absurdly simple. Here's the problem it solves: LLMs can't guess how long you want an answer to be, or how much effort to put into checking that it's correct. And by 3 pm, after reading hundreds of paragraphs, you're too tired for another wall of text.
+LLMs don't know if you want a quick answer or a deep dive, or how carefully they should check their facts. And by 3 pm, after reading dozens of AI-generated paragraphs, you're too exhausted for another wall of text. Spoon fixes this with a ridiculously simple way to control AI responses.
 
-With spoon, you add a tiny token like `1m` (a 1-minute read) or `ver` (verify before answering) instead of writing out a sentence of instructions, and you get exactly the answer you wanted: the right length, the right shape, and checked. The 1.5-minute explainer video below shows it in action.
+Just add `sp 1m` for a one-minute read or `sp ver` to verify the answer. Mix tiny tokens to get the length, clarity, and confidence you want—without writing lengthy instructions. Takes seconds to start and works with Claude Code, Codex, Cursor, and any other platform that supports skills. [See it in action (90 seconds)](https://youtu.be/Q5Ichk3hjfs).
 
 <p align="center">
   <a href="https://youtu.be/Q5Ichk3hjfs">
