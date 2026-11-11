@@ -39,8 +39,6 @@ Prefer the Claude Code or Codex marketplace? [See Install](#-install).
 
 **3. Feel your brain breathe again.** 🧘
 
-Every answer ends with 🥄 and a short note on what your tokens did.
-
 ---
 
 ## 📋 Cheat sheet
