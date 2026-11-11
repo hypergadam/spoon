@@ -2,6 +2,14 @@
 
 <h3 align="center">Absurdly simple, seriously powerful.</h3>
 
+---
+
+## 🤔 I'm busy. What is it?
+
+spoon is a tiny skill that works on every major agent platform (Claude Code, Codex, Cursor and more). It takes seconds to start with and is absurdly simple. Here's the problem it solves: LLMs can't guess how long you want an answer to be, or how much effort to put into checking that it's correct. And by 3 pm, after reading hundreds of paragraphs, you're too tired for another wall of text.
+
+With spoon, you add a tiny token like `1m` (a 1-minute read) or `ver` (verify before answering) instead of writing out a sentence of instructions, and you get exactly the answer you wanted: the right length, the right shape, and checked. The 1.5-minute explainer video below shows it in action.
+
 <p align="center">
   <a href="https://youtu.be/Q5Ichk3hjfs">
     <img src="spoon-youtube-banner.png" alt="Watch the spoon explainer video on YouTube" width="720">
@@ -9,14 +17,6 @@
   <br>
   <sub>▶️ <a href="https://youtu.be/Q5Ichk3hjfs">Watch the explainer video</a></sub>
 </p>
-
----
-
-## 🤔 I'm busy. What is it?
-
-spoon is a tiny skill that works on every major agent platform (Claude Code, Codex, Cursor and more). It takes seconds to start with and is absurdly simple. Here's the problem it solves: LLMs can't guess how long you want an answer to be, or how much effort to put into checking that it's correct. And by 3 pm, after reading hundreds of paragraphs, you're too tired for another wall of text.
-
-With spoon, you add a tiny token like `1m` (a 1-minute read) or `ver` (verify before answering) instead of writing out a sentence of instructions, and you get exactly the answer you wanted: the right length, the right shape, and checked. The [1.5-minute explainer video](https://youtu.be/Q5Ichk3hjfs) shows it in action.
 
 ---
 
@@ -30,16 +30,14 @@ npx skills add practicajs/spoon --skill spoon
 
 …or use your favorite marketplace ([Claude Code, Codex](#-install)).
 
-**2. Open your favorite AI editor** and type `sp`, then a token or two, then your question:
+**2. Open your favorite AI editor**, type your question, then add `sp` and a token or two:
 
-```
-sp 1m   why is my app slow?                                 → a 1-minute read
-sp 3s   what are MCPs?                                      → 3 sentences
-sp ver  can iOS send notifications while the phone sleeps?  → checked before it's sent
-sp 1m cr da   should we move to the cloud?                  → 1 minute, crystal clear, with data
-```
+- why is my app slow? **`sp 1m`** → a 1-minute read
+- what are MCPs? **`sp 3s`** → 3 sentences
+- can iOS send notifications while the phone sleeps? **`sp ver`** → checked before it's sent
+- should we move to the cloud? **`sp 1m cr da`** → 1 minute, crystal clear, with data
 
-Tokens can also go at the end of the message. Every answer ends with 🥄 and a short note on what your tokens did.
+Every answer ends with 🥄 and a short note on what your tokens did.
 
 ---
 
