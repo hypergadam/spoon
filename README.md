@@ -1,7 +1,22 @@
-<h1 align="center">🥄<br>spoon</h1>
+<h1 align="center"><img src="spoon-title.svg" alt="🥄 spoon" height="120"></h1>
 
-<p align="center"><b>Small spoon. Serious power.</b><br>
-Tiny tokens: how much, how sure, what shape.</p>
+<h3 align="center">Absurdly simple, seriously powerful.</h3>
+
+<p align="center">
+  <a href="https://youtu.be/Q5Ichk3hjfs">
+    <img src="spoon-youtube-banner.png" alt="Watch the spoon explainer video on YouTube" width="720">
+  </a>
+  <br>
+  <sub>▶️ <a href="https://youtu.be/Q5Ichk3hjfs">Watch the explainer video</a></sub>
+</p>
+
+---
+
+## 🤔 I'm busy. What is it?
+
+spoon is a tiny skill that works on every major agent platform (Claude Code, Codex, Cursor and more). It takes seconds to start with and is absurdly simple. Here's the problem it solves: LLMs can't guess how long you want an answer to be, or how much effort to put into checking that it's correct. And by 3 pm, after reading hundreds of paragraphs, you're too tired for another wall of text.
+
+With spoon, you add a tiny token like `1m` (a 1-minute read) or `ver` (verify before answering) instead of writing out a sentence of instructions, and you get exactly the answer you wanted: the right length, the right shape, and checked. The [1.5-minute explainer video](https://youtu.be/Q5Ichk3hjfs) shows it in action.
 
 ---
 

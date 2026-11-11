@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="160" viewBox="0 0 560 160" role="img" aria-label="spoon">
+  <style>
+    .t { fill: #1f2328; font: 800 128px -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; letter-spacing: -4px; }
+    .e { font: 112px "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
+    @media (prefers-color-scheme: dark) { .t { fill: #f0f6fc; } }
+  </style>
+  <text class="e" x="10" y="124">🥄</text>
+  <text class="t" x="150" y="124">spoon</text>
+</svg>
