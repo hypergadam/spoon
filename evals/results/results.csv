@@ -1,0 +1,646 @@
+Description,q,max_turns,[claude-cli] {{q}},Status,Score,Named Scores,Grader Reason,Comment,[claude-sdk] {{q}},Status,Score,Named Scores,Grader Reason,Comment,[codex] {{q}},Status,Score,Named Scores,Grader Reason,Comment,[opencode] {{q}},Status,Score,Named Scores,Grader Reason,Comment
+trigger / clear (sp 1m),Who was the first president of the United States? sp 1m,1,,PASS,1.00,,All assertions passed,,"George Washington was the first president of the United States. He served two terms, from 1789 to 1797, and set precedents such as stepping down after two terms.
+
+🥄 1 minute read",PASS,1.00,,All assertions passed,,"**George Washington** was the first president of the United States. He served two terms, from **1789 to 1797**, and was inaugurated on April 30, 1789, in New York City.
+
+Before becoming president, he commanded the Continental Army during the American Revolutionary War.
+
+🥄 1 minute read",PASS,1.00,,All assertions passed,,"George Washington was the first President of the United States, serving from 1789 to 1797. He was elected unanimously by the Electoral College — the only president in U.S. history to receive all electoral votes, and he achieved this in both of his elections.
+
+Before the presidency, Washington gained fame as Commander-in-Chief of the Continental Army during the American Revolutionary War (1775–1783), leading the colonies to victory against Britain. He also presided over the Constitutional Convention of 1787, which drafted the U.S. Constitution.
+
+As president, Washington shaped the office in lasting ways. He established the first cabinet, appointed the first Supreme Court justices, set the precedent of a two-term limit (later codified in the 22nd Amendment), and chose to be called ""Mr. President"" rather than more monarchical titles. He oversaw the addition of the Bill of Rights, managed early foreign policy neutrality amid war between Britain and France, and suppressed the Whiskey Rebellion, asserting federal authority.
+
+After two terms, he voluntarily stepped down — a powerful demonstration of the peaceful transfer of power and rejection of lifetime rule. His Farewell Address warned against political factions and entangling foreign alliances. He died in 1799 and is often called the ""Father of His Country.""
+
+🥄 1 minute read",FAIL,0.50,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+trigger / clear (sp 1m),Who was the first president of the United States? sp 1m,1,,PASS,1.00,,All assertions passed,,"George Washington was the first president of the United States. He served two terms, from 1789 to 1797.
+
+🥄 1 minute read",PASS,1.00,,All assertions passed,,"**George Washington** was the first president of the United States. He served from **April 30, 1789, to March 4, 1797**, completing two terms.
+
+Before becoming president, Washington led the Continental Army during the American Revolutionary War. As president, he helped establish how the new federal government would operate. His decision to step down after two terms set a precedent followed by presidents for more than a century.
+
+🥄 1 minute read",PASS,1.00,,All assertions passed,,"George Washington was the first president of the United States, serving from April 30, 1789, to March 4, 1797.
+
+He was unanimously chosen by the Electoral College in both the 1789 and 1792 elections—a distinction no other president has matched. Washington took the oath of office at Federal Hall in New York City, which was then the nation's capital.
+
+His presidency set many of the precedents that still shape the office today. He assembled the first cabinet, established the two-term tradition (later codified in the 22nd Amendment), and deliberately stepped down after two terms to demonstrate that power could transfer peacefully. He also oversaw the creation of the federal judiciary and the first national bank.
+
+Before the presidency, Washington had already become a central figure in American history. He commanded the Continental Army during the Revolutionary War and presided over the Constitutional Convention in 1787. His reputation for integrity and his willingness to relinquish power were instrumental in legitimizing the new government.
+
+He died in 1799 at Mount Vernon, and his farewell address—warning against political factions and foreign entanglements—remains widely quoted in American political discourse.
+
+🥄 1 minute read",FAIL,0.50,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+trigger / near-miss (code request + sp 1m),create a python file for me that prints the time sp 1m,1,,PASS,1.00,,All assertions passed,,"I created `print_time.py` in your working directory. It prints the current local date and time, like `2026-11-11 14:30:05`.
+
+Run it with `python3 print_time.py`. I haven't run it myself.
+
+I read ""time"" as the current time. If you meant something else, such as printing it every minute, tell me and I'll change it.
+
+🥄 1 minute read",PASS,1.00,,All assertions passed,,"Created [print_time.py](/private/var/folders/6q/t_76kv311qv9ch0mh8f12mr00000gn/T/tmp.Nlm8mDKQbB/print_time.py). It prints the current local time in `HH:MM:SS` format.
+
+Run it with:
+
+```bash
+python3 print_time.py
+```
+
+Verified it runs successfully.
+
+🥄 1 minute read",PASS,1.00,,All assertions passed,,"Created `time_print.py` — prints current time as `YYYY-MM-DD HH:MM:SS`. Run with `python time_print.py`.
+
+🥄 1 minute read",FAIL,0.50,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+trigger / near-miss (code request + sp 1m),create a python file for me that prints the time sp 1m,1,,PASS,1.00,,All assertions passed,,"I created `print_time.py` in your working directory. It prints the current date and time, like `2026-11-11 14:30:00`. I haven't run it.
+
+Run it with:
+
+```
+python3 print_time.py
+```
+
+I wasn't sure what ""sp"" in your message meant. I took it as the Spoon shortcut, so I kept this reply to a one-minute read. If you meant something else, such as printing the time in a specific format or timezone, tell me and I'll change the file.
+
+🥄 1 minute read",PASS,1.00,,All assertions passed,,"Created [current_time.py](/private/var/folders/6q/t_76kv311qv9ch0mh8f12mr00000gn/T/tmp.Nlm8mDKQbB/current_time.py), which prints your local time as `HH:MM:SS`. Ran it successfully.
+
+```bash
+python3 current_time.py
+```
+
+🥄 1 minute read",PASS,1.00,,All assertions passed,,"Created `print_time.py`. Run it with `python3 print_time.py`:
+
+- **`datetime.now()`** grabs the current local time at the moment of the call
+- **`strftime(""%H:%M:%S"")`** formats it as a 24-hour clock, e.g. `14:07:33`
+- The `main()` + `if __name__ == ""__main__""` pattern means it runs when executed directly, but can also be imported elsewhere without side effects
+
+Want a different format? A few quick tweaks:
+- `%Y-%m-%d %H:%M:%S` adds the date → `2026-11-11 14:07:33`
+- `datetime.now().isoformat()` gives full precision without any format string
+- `datetime.now(timezone.utc)` (with `timezone` imported) prints UTC instead of local time
+
+🥄 1 minute read",FAIL,0.50,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+"trigger / plain question, no spoon or sp = not loaded",What's a good way to learn to cook at home?,1,"Start small and build skills in a deliberate order:
+
+1. **Master a few basics first.** Learn core techniques rather than lots of recipes: knife skills (dice, slice, mince), sautéing, roasting, boiling and simmering, and pan-searing. These cover most home cooking.
+
+2. **Cook a small rotation of simple dishes repeatedly.** Scrambled eggs, a roast chicken, a pasta with simple sauce, a stir-fry, a pot of soup. Repeating a dish lets you notice what changes the result, and that builds intuition faster than making something new each night.
+
+3. **Follow recipes closely at first.** Read the whole recipe before starting, and prep all ingredients before turning on the heat (mise en place). Once you understand why a recipe works, start adjusting it.
+
+4. **Learn the ""why"" along with the ""how.""** *Salt Fat Acid Heat* by Samin Nosrat (book or Netflix series) teaches the four elements behind good food. *The Food Lab* by J. Kenji López-Alt explains the science behind techniques.
+
+5. **Use trustworthy sources.** Good starting points are Serious Eats, Budget Bytes, and Bon Appétit's basics videos, or Ethan Chlebowski and Adam Ragusea on YouTube.
+
+6. **Taste as you go.** Season in stages and adjust at the end with salt, acid (lemon or vinegar), or fat. This is the biggest difference between okay and good home cooking.
+
+7. **Get a few good tools, not many.** A sharp 8-inch chef's knife, a cutting board, a heavy skillet, a pot, a sheet pan, and an instant-read thermometer are enough.
+
+8. **Plan a few meals a week.** Cooking 3 to 4 times a week builds the habit. Cook extra on busy days so you have leftovers.
+
+9. **Accept mistakes.** Burnt garlic and bland sauce are normal. Note what went wrong and try again.
+
+10. **Expand gradually.** Once you're comfortable, add a new cuisine or technique every few weeks, such as braising, baking bread, or making fresh pasta.
+
+If you tell me your current skill level, the cuisines you like, and how much time you have, I can suggest a specific first-month plan.",PASS,1.00,,All assertions passed,,"Here's an approach that works well for most people:
+
+**1. Start with a few basic techniques, not recipes**
+- Learn knife basics (grip, dicing an onion), how to season with salt, and how to control heat.
+- Good starting resources: *Salt Fat Acid Heat* by Samin Nosrat (book or Netflix series), Kenji López-Alt's *The Food Lab*, and YouTube channels like Basics with Babish, Ethan Chlebowski, or J. Kenji López-Alt.
+
+**2. Master a small repertoire of staples**
+Cook the same 5–8 dishes repeatedly until you don't need the recipe. Good candidates are:
+- Scrambled or fried eggs
+- Roast chicken thighs and vegetables
+- A pan sauce or simple tomato pasta
+- Stir-fry
+- Soup or stew
+- Rice or grains
+- A basic vinaigrette and salad
+
+Repetition teaches you more than variety does, because you start to notice what changes the result.
+
+**3. Cook 3–4 times a week, keep it simple**
+- Pick recipes with 5–8 ingredients.
+- Read the whole recipe before you start.
+- Prep everything first (*mise en place*). It makes cooking calmer and fewer things burn.
+
+**4. Taste constantly and adjust**
+Most ""bland"" food needs salt, acid (lemon, vinegar), or more browning. Tasting as you go is the fastest way to build intuition.
+
+**5. Get a few good tools, not many**
+- A sharp 8"" chef's knife
+- A large skillet (cast iron or stainless)
+- A heavy pot
+- A cutting board
+- A cheap instant-read thermometer, which takes the guesswork out of meat
+
+**6. Learn from your failures**
+Overcooked chicken or burnt garlic is normal. Make one change at a time, and you'll improve quickly.
+
+**7. Optional boosts**
+- Take a local or online cooking class for hands-on feedback.
+- Cook along with a video the first few times.
+- Cook with a friend who's more experienced.
+
+If you tell me your current skill level, diet, and what you like to eat, I can suggest a specific 4-week starter plan.",PASS,1.00,,All assertions passed,,"A good way to learn is to **cook a few simple meals repeatedly**, adding one new skill at a time. Repetition helps you understand heat, timing, and seasoning.
+
+Start with three meals you enjoy:
+
+- **Eggs or a vegetable scramble:** learn heat control.
+- **Pasta with a simple tomato sauce:** learn timing and seasoning.
+- **Roasted vegetables with chicken, tofu, or chickpeas:** learn cutting evenly and using the oven.
+
+For each meal, follow one clear recipe the first time. Make it again within a week, changing only one thing based on what you noticed—less heat, more salt, or a shorter cooking time.
+
+A few habits make learning easier:
+
+- Read the whole recipe and prepare ingredients before turning on the heat.
+- Taste as you go, when ingredients are safe to eat.
+- Keep a quick note: “too salty,” “needed more browning,” or “great with lemon.”
+- Start with the equipment you have; a knife, cutting board, pan, and pot cover plenty.
+
+**For your first week:** cook one easy meal twice and one new meal once. Aim for food you’re happy to eat, then build from there.
+
+What do you enjoy eating, and how much cooking have you done so far?",PASS,1.00,,All assertions passed,,"Start with a few simple, repeatable meals (eggs, pasta, stir-fry, roast chicken) and cook them weekly until they feel automatic. Then learn one technique at a time—searing, roasting, sauces—rather than memorizing recipes. Follow a single trusted source (e.g. Kenji's *The Food Lab* or Basics with Babish) and taste/season as you go.",PASS,1.00,,All assertions passed,
+"trigger / plain question, no spoon or sp = not loaded",What's a good way to learn to cook at home?,1,"Start small and build skills in a deliberate order:
+
+1. **Master a handful of basic techniques first.** Learn to sauté, roast, boil/simmer, pan-sear, and make a simple sauce. These cover most recipes. Salt, Fat, Acid, Heat by Samin Nosrat (book or Netflix series) teaches the ""why"" behind them.
+
+2. **Cook the same few dishes repeatedly.** Pick 5–8 simple meals, such as scrambled eggs, a pasta with a pan sauce, a stir-fry, roast chicken thighs and vegetables, or a soup. Repeating them builds intuition faster than trying a new recipe every night.
+
+3. **Follow recipes closely at first, then loosen up.** Read the whole recipe before you start. Once you understand why each step is there, start swapping ingredients and adjusting seasoning.
+
+4. **Taste constantly.** Season in layers and adjust at the end with salt, acid (lemon or vinegar), or fat. This is the biggest difference between okay and good food.
+
+5. **Get a few good tools.** You need a sharp 8-inch chef's knife, a cutting board, one large skillet, a heavy pot, a sheet pan, and an instant-read thermometer. Skip the gadgets.
+
+6. **Learn knife basics.** A short video on dicing an onion and holding the knife correctly makes everything faster and safer.
+
+7. **Prep before you cook (mise en place).** Chopping and measuring everything first keeps you from burning the garlic while you hunt for the next ingredient.
+
+8. **Use good teachers.** Helpful sources include Kenji López-Alt (Serious Eats, YouTube), Babish, Adam Ragusea, J. Kenji's *The Food Lab*, and Mark Bittman's *How to Cook Everything*.
+
+9. **Plan a weekly rhythm.** Aim for 3–4 home-cooked dinners a week. Cook a bit extra to get leftovers for lunch, which keeps the habit sustainable.
+
+10. **Accept mistakes.** Burnt, bland, and overcooked dishes are how you calibrate. Note what you'd change next time.
+
+If you tell me what cuisines you like or how much time you have, I can suggest a specific starter list of recipes.",PASS,1.00,,All assertions passed,,"The most reliable way is to learn techniques rather than just follow recipes, and to practice a small set of dishes repeatedly.
+
+**1. Get a minimal kit**
+- A sharp 8"" chef's knife, a cutting board, and a large skillet (stainless or cast iron).
+- A medium pot, a sheet pan, a digital thermometer, and a scale if you plan to bake.
+
+**2. Learn core techniques first**
+- **Knife skills:** dice an onion, mince garlic, slice vegetables evenly.
+- **Heat control:** preheat the pan, don't overcrowd it, and learn what ""medium-high"" looks like.
+- **Seasoning:** salt in layers and taste as you go. Add acid (lemon, vinegar) when a dish tastes flat.
+- **Basic methods:** sautéing, roasting, simmering, boiling, and pan-searing.
+
+**3. Cook a small rotation, then repeat it**
+Make 5-10 dishes until you can do them without a recipe. Good starters:
+- Scrambled and fried eggs
+- Roast chicken thighs and vegetables
+- Pasta with a simple pan sauce
+- Stir-fry with rice
+- A soup or chili
+- A basic vinaigrette and salad
+
+Repetition teaches more than variety. Change one thing each time, such as the spice, the protein, or the cooking time.
+
+**4. Use good teachers**
+- **Books:** *Salt, Fat, Acid, Heat* (Samin Nosrat) is the best single starting point. *How to Cook Everything* (Mark Bittman) works well as a reference.
+- **Websites and channels:** Serious Eats, Kenji López-Alt, Basics with Babish, and J. Kenji's *The Food Lab* explain why things work, not just what to do.
+- **Recipe sites:** NYT Cooking and Budget Bytes are reliable for tested recipes.
+
+**5. Build habits that help**
+- Read the whole recipe before you start.
+- Do your *mise en place* (chop and measure everything before turning on the heat).
+- Taste constantly.
+- Keep notes on what you'd change.
+- Plan 2-3 cooking nights a week instead of trying to cook every day.
+
+**6. Expect mistakes**
+Burnt garlic, bland food, and overcooked chicken happen to everyone. A thermometer fixes the last one: chicken is done at 165°F (74°C).
+
+If you tell me your current level, diet, and how much time you have, I can suggest a specific 4-week plan.",PASS,1.00,,All assertions passed,,"A good way to learn is to **cook a few simple meals repeatedly**, adding one new skill at a time.
+
+Start with three meals you actually enjoy:
+
+- **Scrambled eggs or an omelet:** practice controlling heat.
+- **Pasta with a simple tomato sauce:** practice chopping, timing, and seasoning.
+- **Roasted vegetables with chickpeas or chicken:** practice using the oven and checking doneness.
+
+For each meal, follow one clear recipe. Make it two or three times before moving on—you’ll notice what changes when you use less heat, cook longer, or add a little more salt or lemon.
+
+Keep the setup simple: a knife, cutting board, skillet, saucepan, and baking tray are enough to begin. Read the whole recipe and prepare your ingredients before turning on the heat. Taste as you go, where safe, and write down one thing you’d change next time.
+
+**An easy first-week target:** cook two meals, then repeat whichever you liked most. Getting comfortable matters more than making something impressive.",PASS,1.00,,All assertions passed,,"Start with 5-6 simple dishes you already like (pasta, stir-fry, roast chicken, eggs), cook each a few times to build repetition, and learn one technique per dish (searing, sautéing, roasting). Follow one reliable source (e.g. Serious Eats, Kenji, Salt Fat Acid Heat) instead of random recipes, taste as you go, and keep a note of what worked.",PASS,1.00,,All assertions passed,
+dose / sp 1s = 1-2 sentences,Who was the most beloved US president in history? sp 1s,,"Abraham Lincoln is the most common answer: he's consistently ranked the greatest president and is widely revered for preserving the Union and ending slavery, though ""most beloved"" is subjective, and in terms of contemporary popularity, JFK (70%+ approval at his death) and FDR (four-time election winner) are strong contenders.
+
+🥄 1 sentence",PASS,1.00,,All assertions passed,,"Abraham Lincoln is most often ranked the greatest and most beloved US president, topping historian surveys for decades, though Franklin D. Roosevelt and George Washington are close rivals, and Ronald Reagan and John F. Kennedy score highest in public approval polls.
+
+🥄 1 sentence",PASS,1.00,,All assertions passed,,"**Abraham Lincoln is a strong choice for lasting public affection**, leading a [2023 YouGov poll](https://yougov.com/en-us/articles/45989-presidents-6-jfk-fdr-washington-jefferson-lincoln) with 84% favorability among six prominent presidents, though no definitive “most beloved” ranking exists.
+
+🥄 1 sentence",PASS,1.00,,All assertions passed,,"No objective answer exists, but George Washington and Abraham Lincoln consistently rank highest in historians' polls, with FDR and Reagan also frequently cited.
+
+🥄 1 sentence",FAIL,0.67,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+dose / sp 1s = 1-2 sentences,Who was the most beloved US president in history? sp 1s,,"Abraham Lincoln is the usual pick: he ranks first in most historian surveys and is widely revered for preserving the Union and ending slavery. Franklin D. Roosevelt and George Washington are close behind. ""Beloved"" is subjective, though. John F. Kennedy and Ronald Reagan have had the highest Gallup approval ratings in retrospective polls.
+
+🥄 1 sentence",FAIL,0.67,,"4 sentence(s) (want 1–2), newlines: false.",,"Abraham Lincoln is most often ranked the greatest and most beloved US president, though by approval rating John F. Kennedy (about 70% average in Gallup polls) is the highest-rated in modern polling.
+
+🥄 1 sentence",PASS,1.00,,All assertions passed,,"**John F. Kennedy** is a strong candidate, with 90% retrospective approval in [Gallup’s 2023 poll](https://news.gallup.com/poll/508625/retrospective-approval-jfk-rises-trump.aspx), though no definitive measure of “most beloved” spans all US presidents.
+
+🥄 1 sentence",PASS,1.00,,All assertions passed,,"Abraham Lincoln consistently ranks as the most beloved, topping historians' and public polls, though Washington, FDR, and JFK also draw deep affection.
+🥄 1 sentence",FAIL,0.67,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+dose / sp 1p = one paragraph,Can you summarize the causes of WW1? sp 1p,,"World War I had no single cause. It came from several long-building pressures that a single crisis then set off. The alliance system split Europe into two armed blocs, the Triple Entente (France, Russia, Britain) and the Triple Alliance (Germany, Austria-Hungary, Italy), so a local conflict could pull in every major power. Militarism and an arms race, especially the Anglo-German naval rivalry, made war planning rigid. Germany's Schlieffen Plan, for example, required a fast mobilization that left little room for diplomacy. Imperial competition over colonies and markets, along with nationalism, added to the tension. Nationalism was most explosive in the Balkans, where Slavic movements backed by Russia and Serbia threatened the multi-ethnic Austro-Hungarian Empire. The immediate trigger came on June 28, 1914, when Bosnian Serb nationalist Gavrilo Princip assassinated Archduke Franz Ferdinand in Sarajevo. Austria-Hungary issued an ultimatum to Serbia, with Germany's ""blank cheque"" of support behind it. Russia mobilized to defend Serbia, Germany declared war on Russia and France, and its invasion of Belgium brought Britain in. Each step was driven by the alliances, the mobilization timetables and miscalculations about how long and how costly the war would be.
+
+🥄 1 paragraph",PASS,1.00,,All assertions passed,,"World War I had deep underlying causes and one immediate trigger. The long-term causes are often summarized as MAIN: militarism, alliances, imperialism, and nationalism. European powers were locked in an arms race, especially the Anglo-German naval rivalry, and their rigid mobilization plans left little room for diplomacy. A web of alliances (the Triple Alliance of Germany, Austria-Hungary and Italy against the Triple Entente of France, Russia and Britain) meant a local conflict could pull in the whole continent. Imperial competition for colonies and markets bred distrust, and nationalism, especially Slavic nationalism in the Balkans and French-German revanchism over Alsace-Lorraine, destabilized the multi-ethnic Austro-Hungarian and Ottoman empires. The spark came on 28 June 1914, when Serbian-backed Gavrilo Princip assassinated Archduke Franz Ferdinand in Sarajevo. Austria-Hungary, backed by Germany's ""blank cheque,"" issued an ultimatum to Serbia. Russia mobilized to defend Serbia, Germany declared war on Russia and France, and Germany's invasion of Belgium brought Britain in, so a regional crisis became a world war within weeks.
+
+🥄 1 paragraph",PASS,1.00,,All assertions passed,,"World War I grew out of **nationalism, imperial rivalry, military competition, and rival alliances** that intensified distrust among European powers. The immediate trigger was the assassination of Austria-Hungary’s Archduke Franz Ferdinand by a Bosnian Serb nationalist on June 28, 1914. With German backing, Austria-Hungary attacked Serbia; Russia mobilized in support of Serbia, and Germany declared war on Russia and its ally France. Germany’s invasion of neutral Belgium brought Britain into the war. These decisions turned a Balkan crisis into a European war: alliances widened the conflict, while rigid military plans and leaders’ willingness to risk war helped defeat diplomacy.
+
+🥄 1 paragraph",PASS,1.00,,All assertions passed,,"WW1 was caused by a tangle of long-term pressures and one spark. Nationalism and imperial rivalry (especially Anglo-German naval competition and disputes over colonies) bred distrust, while the alliance system split Europe into two armed blocs that turned a local quarrel into a continental war. Militarism glorified war and rigid mobilization plans removed leaders' room to back down, and the declining Ottoman and Austro-Hungarian empires created a volatile Balkans. The spark came on June 28, 1914, when Archduke Franz Ferdinand was assassinated in Sarajevo; Austria-Hungary's ultimatum to Serbia, and Russia's backing of Serbia, pulled the alliances into war within weeks.
+
+🥄 1 paragraph",FAIL,0.67,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+dose / sp 1p = one paragraph,Can you summarize the causes of WW1? sp 1p,,"World War I grew from long-building tensions that a single event ignited. Militarism fed an arms race, especially the Anglo-German naval rivalry, and rigid mobilization plans left little room for diplomacy. Alliances split Europe into two blocs, the Triple Entente (France, Russia, Britain) and the Triple Alliance (Germany, Austria-Hungary, Italy), so a local conflict could pull in every major power. Imperial rivalries over colonies and markets, together with intense nationalism, deepened mistrust. Nationalism was especially explosive in the Balkans, where Slavic movements backed by Serbia and Russia threatened the multi-ethnic Austro-Hungarian Empire. The trigger came on 28 June 1914, when Bosnian Serb Gavrilo Princip assassinated Archduke Franz Ferdinand in Sarajevo. Austria-Hungary, backed by Germany's ""blank cheque,"" issued Serbia an ultimatum and then declared war. Russia mobilized to defend Serbia, Germany declared war on Russia and France, and its invasion of Belgium brought Britain in, so a regional crisis became a continental war within weeks.
+
+🥄 1 paragraph",PASS,1.00,,All assertions passed,,"World War I grew out of long-term tensions that a single crisis then set off. Rivalries among the great powers had built up for decades. Germany's rise unsettled Britain, France and Russia, and a naval arms race and colonial competition added to the strain. Europe also split into two rival alliance blocs, the Triple Alliance (Germany, Austria-Hungary, Italy) and the Triple Entente (France, Russia, Britain), so a local conflict could drag in everyone. Militarism pushed the same way: huge armies, rigid mobilization plans like Germany's Schlieffen Plan, and military leaders with strong influence over policy. Nationalism fed the instability, especially in the Balkans, where Slavic movements backed by Serbia and Russia threatened multi-ethnic Austria-Hungary and the weakening Ottoman Empire. The spark came on June 28, 1914, when a Bosnian Serb nationalist assassinated Archduke Franz Ferdinand in Sarajevo. Austria-Hungary, with German backing, issued Serbia an ultimatum and then declared war. Russia mobilized to defend Serbia, Germany declared war on Russia and France, and Germany's invasion of Belgium brought Britain in. Within weeks, the alliance system and mobilization timetables had turned a regional crisis into a continental war.
+
+🥄 1 paragraph",PASS,1.00,,All assertions passed,,"World War I began in 1914 when **the assassination of Austria-Hungary’s Archduke Franz Ferdinand** by a Bosnian Serb nationalist triggered a crisis with Serbia. Deeper tensions made that crisis dangerous: nationalism, competition for colonies and influence, an arms race, and rival alliances had increased distrust across Europe. Austria-Hungary, backed by Germany, attacked Serbia; Russia mobilized to support Serbia, and Germany declared war on Russia and its ally France. Germany’s invasion of neutral Belgium brought Britain into the war. **Leaders’ decisions during the crisis turned a regional conflict into a European war**, as military plans and fears of losing an advantage overwhelmed diplomacy.
+
+🥄 1 paragraph",PASS,1.00,,All assertions passed,,"World War I (1914–1918) arose from a web of interlocking causes. Intense nationalism, imperial rivalries over colonies and trade, and an arms race (especially the Anglo-German naval buildup) inflamed tensions among Europe's great powers. A rigid alliance system—Germany and Austria-Hungary vs. Russia, France, and Britain—turned a local conflict into continental war. Militarism and war planning (like Germany's Schlieffen Plan) made escalation rapid. The immediate trigger was the assassination of Austro-Hungarian Archduke Franz Ferdinand by Serbian nationalist Gavrilo Princip in Sarajevo on June 28, 1914, prompting Austria-Hungary to declare war on Serbia, which cascaded through the alliances into total war.
+
+🥄 1 short paragraph",FAIL,0.67,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+"dose / sp 1m = 60-225 words, footer included",Can you summarize the causes of WW1? sp 1m,,"World War I had no single cause. Several long-term pressures built up until one event set them off.
+
+- **Militarism:** The great powers raced to build bigger armies and navies, especially Britain and Germany at sea. Rigid mobilization plans, like Germany's Schlieffen Plan, left little time for diplomacy.
+- **Alliances:** Europe split into the Triple Entente (France, Russia, Britain) and the Triple Alliance (Germany, Austria-Hungary, Italy). A local conflict could pull in every major power.
+- **Imperial rivalry:** Competition for colonies and markets, such as the Moroccan crises, created distrust, particularly between Germany, France and Britain.
+- **Nationalism:** Slavic nationalism in the Balkans threatened multi-ethnic Austria-Hungary. Serbia backed South Slav aspirations, and Russia saw itself as their protector. France wanted Alsace-Lorraine back, and Germany pursued its own prestige and ""place in the sun.""
+- **The spark:** On 28 June 1914, Gavrilo Princip, a Bosnian Serb nationalist, assassinated Archduke Franz Ferdinand in Sarajevo. Austria-Hungary, with Germany's ""blank cheque"" of support, issued an ultimatum to Serbia. Russia mobilized to defend Serbia. Germany declared war on Russia and France and invaded Belgium, which brought Britain in.
+
+Historians still debate how much blame each power deserves. Many stress that miscalculation and the belief that the war would be short and decisive made it more likely.
+
+🥄 1 minute read",PASS,1.00,,All assertions passed,,"World War I had no single cause. Long-term tensions combined with a short-term crisis.
+
+**Militarism**
+Europe's great powers were building up armies and navies. The Anglo-German naval race was the sharpest example. Rigid mobilization plans, like Germany's Schlieffen Plan, left little room to slow down once a crisis began.
+
+**Alliances**
+Europe was split into two blocs: the Triple Entente (France, Russia, Britain) and the Triple Alliance (Germany, Austria-Hungary, Italy). A local conflict could therefore pull in every major power.
+
+**Imperialism and rivalry**
+Competition for colonies and markets caused friction, including the Moroccan crises and Anglo-German trade and naval rivalry. France also wanted revenge for losing Alsace-Lorraine in 1871.
+
+**Nationalism**
+Slavic nationalism in the Balkans threatened multi-ethnic Austria-Hungary. Serbia, backed by Russia, pushed for South Slav unity. Pride and rivalry between the powers fed public support for war.
+
+**The July Crisis (the trigger)**
+On 28 June 1914, Gavrilo Princip, a Bosnian Serb, assassinated Archduke Franz Ferdinand in Sarajevo. Austria-Hungary, backed by Germany's ""blank cheque,"" issued an ultimatum to Serbia. Russia mobilized to defend Serbia, and Germany declared war on Russia and France. Germany's invasion of Belgium brought Britain in. Within weeks, the alliance system had turned a regional dispute into a continental war.
+
+**Historians' debate**
+Historians still argue over how much blame each power carries. Many point to Germany and Austria-Hungary's risk-taking. Others stress miscalculation by all sides, which Christopher Clark calls ""sleepwalking.""
+
+🥄 1 minute read",FAIL,0.67,,Word count 236 is not between 60 and 225,,"World War I began in 1914 when a crisis in the Balkans escalated into a European war. Its causes combined long-standing tensions with decisions made over a few crucial weeks.
+
+- **Nationalism:** Rival national ambitions increased hostility. In the Balkans, Serbian nationalism and movements for South Slav unity threatened Austria-Hungary’s multinational empire.
+- **Imperial rivalry:** Competition for colonies, influence, and prestige deepened distrust among European powers, particularly Britain, France, and Germany.
+- **Militarism:** Expanding armies, the British-German naval arms race, and rigid military plans made leaders more prepared to fight—and fearful of delaying mobilization.
+- **Alliances:** Germany backed Austria-Hungary; France was allied with Russia, which supported Serbia. These relationships helped spread the conflict, although they did not automatically require every country to enter.
+
+**The immediate trigger** was the assassination of Austria-Hungary’s Archduke Franz Ferdinand in Sarajevo on June 28, 1914, by Bosnian Serb nationalist Gavrilo Princip.
+
+With German backing, Austria-Hungary issued Serbia a harsh ultimatum and then declared war. Russian mobilization was followed by German declarations of war against Russia and France. Germany’s invasion of neutral Belgium brought Britain into the war.
+
+The assassination sparked the crisis, but leaders’ decisions, fears, and willingness to risk war turned it into a catastrophe.
+
+🥄 1 minute read",PASS,1.00,,All assertions passed,,"Causes of WW1, roughly 200 words:
+
+**The alliance system.** Europe split into two armed blocs: Germany, Austria-Hungary, and Italy (Triple Alliance) against France, Russia, and Britain (Triple Entente). A local quarrel could drag everyone in.
+
+**Imperialism and rivalry.** Competition for colonies, markets, and prestige bred suspicion, especially between Germany and Britain (naval arms race) and Germany and France (over Morocco and Alsace-Lorraine).
+
+**Militarism.** Huge standing armies, war plans like Germany's Schlieffen Plan, and an arms race made war seem fast and winnable, and made mobilization hard to stop once started.
+
+**Nationalism.** Aggressive nationalism in the Balkans (""powder keg of Europe""), plus ethnic tensions inside Austria-Hungary and Russia's ambition to protect Slavic peoples, kept the region volatile.
+
+**The spark.** On June 28, 1914, Gavrilo Princip assassinated Archduke Franz Ferdinand in Sarajevo. Austria-Hungary blamed Serbia, issued an ultimatum, and declared war. Russia mobilized, Germany backed Austria and declared war on Russia and France, invaded Belgium, and Britain entered. Alliances turned a regional crisis into a world war.
+
+🥄 1 minute read",FAIL,0.67,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+"dose / sp 1m = 60-225 words, footer included",Can you summarize the causes of WW1? sp 1m,,"Historians usually group the causes of WW1 under the acronym **MAIN**, with a short-term trigger on top.
+
+- **Militarism:** The great powers were in an arms race, especially the Anglo-German naval race. Rigid mobilization plans, such as Germany's Schlieffen Plan, left little room for diplomacy once a crisis began.
+- **Alliances:** Europe was split into the Triple Entente (France, Russia, Britain) and the Triple Alliance (Germany, Austria-Hungary, Italy). A local conflict could pull in every member.
+- **Imperialism:** Rivalry over colonies and markets, such as the Moroccan crises, built mistrust. Germany's drive for a ""place in the sun"" challenged British and French dominance.
+- **Nationalism:** Slavic nationalism in the Balkans threatened multi-ethnic Austria-Hungary. Serbia backed South Slav unity, and Russia saw itself as the protector of the Slavs. Pride and the desire for revenge, such as French resentment over Alsace-Lorraine, also fed tensions.
+- **The trigger:** On 28 June 1914, Gavrilo Princip, a Bosnian Serb, assassinated Archduke Franz Ferdinand in Sarajevo. Austria-Hungary issued an ultimatum to Serbia, with Germany's ""blank cheque"" of support behind it. Russia mobilized, Germany declared war on Russia and France, and the invasion of Belgium brought Britain in.
+
+Historians still debate how much blame each power bears. Many stress German risk-taking, and others describe a chain of miscalculations.
+
+🥄 1 minute read",PASS,1.00,,All assertions passed,,"World War I had deep structural causes and one immediate trigger.
+
+**Long-term causes (often remembered as MAIN)**
+- **Militarism:** European powers built up huge armies and navies. Germany and Britain were locked in a naval arms race. Rigid mobilization plans, like Germany's Schlieffen Plan, left little room for delay.
+- **Alliances:** Europe split into two blocs, the Triple Entente (France, Russia, Britain) and the Triple Alliance (Germany, Austria-Hungary, Italy). A local conflict could therefore pull in the whole continent.
+- **Imperialism:** Rivalry over colonies and markets in Africa and Asia, such as the Moroccan crises, bred distrust and tension among the great powers.
+- **Nationalism:** Pan-Slavism and South Slav aspirations threatened multi-ethnic Austria-Hungary and the Ottoman Empire. French desire to regain Alsace-Lorraine and German ambition for global status added to the pressure.
+
+**Other factors**
+- The Balkans were unstable after the 1912–13 wars, and Russia and Austria-Hungary both sought influence there.
+- Diplomacy was rigid and secretive. Leaders also expected a short, winnable war.
+
+**The trigger**
+- On 28 June 1914, Serbian-backed nationalist Gavrilo Princip assassinated Archduke Franz Ferdinand in Sarajevo.
+- Austria-Hungary issued Serbia an ultimatum, backed by Germany's ""blank cheque."" Russia mobilized to support Serbia. Germany declared war on Russia and France and invaded Belgium, which brought Britain in.
+
+Historians still debate the weight of each cause. Some, like Fritz Fischer, stress German ambition. Others argue that the system as a whole drifted into war.
+
+🥄 1 minute read",FAIL,0.67,,Word count 241 is not between 60 and 225,,"World War I began in 1914 when a crisis in the Balkans escalated into a European war. **The assassination was the spark; rivalries, military planning, and political decisions turned it into a catastrophe.**
+
+Four underlying tensions made Europe vulnerable:
+
+- **Nationalism:** Rival national ambitions fueled hostility. In the Balkans, Serbian nationalism challenged Austria-Hungary, which feared losing control of its South Slav populations.
+- **Great-power rivalry:** Competition for territory, influence, and colonies deepened distrust, particularly between Germany, Britain, and France.
+- **Militarism:** Expanding armies, the Anglo-German naval race, and rigid mobilization plans encouraged leaders to prepare for war and fear falling behind.
+- **Alliances:** Germany backed Austria-Hungary; France was allied with Russia; Britain had understandings with France and Russia. These connections helped spread the crisis, though they did not make war automatic.
+
+On **28 June 1914**, a Bosnian Serb nationalist assassinated Archduke Franz Ferdinand, Austria-Hungary’s heir, in Sarajevo. With German backing, Austria-Hungary confronted Serbia and declared war. Russia mobilized in support of Serbia; Germany declared war on Russia and France. Germany’s invasion of neutral Belgium brought Britain into the conflict.
+
+**War was not inevitable:** leaders chose threats, mobilization, and military action during the July Crisis, accepting risks that diplomacy failed to contain.
+
+🥄 1 minute read",PASS,1.00,,All assertions passed,,"The causes of WW1 combine long-term tensions with an immediate trigger.
+
+**Long-term causes:**
+- **Militarism**: European powers engaged in a massive arms race, especially naval competition between Britain and Germany, and built elaborate war plans.
+- **Alliances**: Europe split into two armed camps — the Triple Alliance (Germany, Austria-Hungary, Italy) and the Triple Entente (France, Russia, Britain). These turned a regional conflict into a continental one.
+- **Imperialism**: Competition for colonies and global influence created repeated friction, notably in Africa and Morocco.
+- **Nationalism**: Aggressive national pride destabilized empires; Slavic nationalism in the Balkans threatened Austria-Hungary, while France yearned for revenge over Alsace-Lorraine.
+
+**The immediate trigger:** On June 28, 1914, Bosnian Serb nationalist Gavrilo Princip assassinated Archduke Franz Ferdinand, heir to Austria-Hungary, in Sarajevo. Austria-Hungary issued an ultimatum to Serbia, then declared war. Russia mobilized to defend Serbia, Germany declared war on Russia and France, and when Germany invaded neutral Belgium, Britain entered. Within weeks, the alliance system had dragged all major powers into war.
+
+Historians still debate whether blame lies primarily with Germany, with all powers equally, or with the rigid mobilization systems that made escalation nearly automatic.
+
+🥄 1 minute read",FAIL,0.67,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+format / sp bul = bullets with bold titles,What are the main benefits of regular exercise? sp bul,,"'- **Heart health:** Exercise strengthens your heart and improves circulation. It lowers blood pressure and cuts the risk of heart disease and stroke.
+- **Weight control:** Burning calories and building muscle helps you manage weight. It also boosts your metabolism.
+- **Mental wellbeing:** Activity releases endorphins, which reduces stress, anxiety, and depression. It also improves mood.
+- **Better sleep:** Regular movement helps you fall asleep faster and sleep more deeply.
+- **Stronger body:** Exercise builds muscle and bone density. This lowers the risk of osteoporosis and falls as you age.
+- **Disease prevention:** It reduces your risk of type 2 diabetes, some cancers, and metabolic syndrome.
+- **Sharper brain:** Exercise improves memory, focus, and thinking. It may also lower dementia risk.
+- **More energy:** You tire less and have more stamina for daily tasks.
+- **Longer life:** Active people tend to live longer and stay independent later in life.
+
+🥄 bullets",FAIL,0.67,,"9 bullet(s), 0 without a 2–4 word bold title.",,"'- **Heart health:** Exercise strengthens your heart, lowers blood pressure, and improves cholesterol. It cuts the risk of heart disease and stroke.
+- **Weight control:** Activity burns calories and builds muscle. Both help you reach and keep a healthy weight.
+- **Better mood:** Exercise releases endorphins and lowers stress, anxiety, and depression symptoms.
+- **Stronger body:** Resistance and weight-bearing activity build muscle and bone density. This protects against osteoporosis and falls as you age.
+- **Disease prevention:** Regular activity lowers the risk of type 2 diabetes, some cancers, and metabolic syndrome.
+- **Better sleep and energy:** You fall asleep faster, sleep more deeply, and feel less fatigued during the day.
+- **Sharper mind:** Exercise boosts memory and focus, and it may lower the risk of cognitive decline and dementia.
+- **Longer life:** About 150 minutes a week of moderate activity is linked to a longer lifespan and more years of independent living.
+
+🥄 bullets",FAIL,0.67,,"8 bullet(s), 0 without a 2–4 word bold title.",,"'- **Better heart health:** Regular exercise strengthens your heart and lowers the risk of cardiovascular disease.
+- **Stronger muscles and bones:** It helps maintain strength, balance, and mobility as you age.
+- **Improved mental wellbeing:** Physical activity can reduce anxiety and depressive symptoms and improve mood.
+- **Better sleep and energy:** It can improve sleep quality and make everyday activities feel less tiring.
+- **Healthier metabolism:** Exercise improves blood sugar control and supports weight management.
+- **Longer, healthier life:** Staying active lowers the risk of premature death and helps preserve independence.
+
+🥄 bullets",PASS,1.00,,All assertions passed,,"'- **Heart health** — Lowers blood pressure and cuts risk of heart disease, stroke, and type 2 diabetes.
+- **Mental wellbeing** — Releases endorphins, reducing anxiety, depression, and stress.
+- **Stronger body** — Builds muscle, bone density, and balance, lowering injury and fall risk.
+- **Weight control** — Burns calories and boosts metabolism, helping maintain a healthy weight.
+- **Better sleep** — Helps you fall asleep faster and sleep more deeply.
+- **Longevity** — Regular activity is linked to longer life and sharper cognition with age.
+
+🥄 bullets",FAIL,0.33,,"6 bullet(s), 1 without a 2–4 word bold title: ""- **Longevity** — Regular activity is linked to longer life "".",
+format / sp bul = bullets with bold titles,What are the main benefits of regular exercise? sp bul,,"'- **Heart health:** Exercise strengthens your heart, lowers blood pressure, and improves cholesterol, cutting your risk of heart disease and stroke.
+- **Weight and metabolism:** It burns calories, builds muscle, and helps regulate blood sugar, which lowers the risk of obesity and type 2 diabetes.
+- **Mental well-being:** Physical activity reduces anxiety and depression, boosts mood through endorphins, and improves sleep quality.
+- **Stronger body:** Resistance and weight-bearing exercise build muscle and bone density, protecting against osteoporosis and falls as you age.
+- **Longevity and cognition:** Regular movement sharpens memory and focus, lowers dementia risk, and is linked to a longer life.
+- **Energy and immunity:** Consistent activity raises daily energy and supports a healthier immune system.
+
+🥄 bullets",PASS,1.00,,All assertions passed,,"'- **Heart health:** Exercise strengthens your heart, lowers blood pressure, and improves cholesterol. This cuts your risk of heart disease and stroke.
+- **Weight control:** It burns calories and builds muscle, which raises your resting metabolism. That makes it easier to maintain a healthy weight.
+- **Better mood:** Exercise releases endorphins and lowers stress hormones. It reduces symptoms of anxiety and depression.
+- **Stronger body:** Resistance and weight-bearing activity build muscle and bone density. This protects against osteoporosis and falls as you age.
+- **Disease prevention:** Regular activity lowers your risk of type 2 diabetes, some cancers, and metabolic syndrome. It also improves blood sugar regulation.
+- **Sharper mind:** Exercise boosts blood flow to the brain, supporting memory and focus. It is linked to a lower risk of cognitive decline and dementia.
+- **Better sleep and energy:** People who exercise tend to fall asleep faster and sleep more deeply. They also report less daytime fatigue.
+- **Longevity:** Meeting the usual guideline of about 150 minutes of moderate activity a week is associated with a longer life.
+
+🥄 bullets",FAIL,0.67,,"8 bullet(s), 1 without a 2–4 word bold title: ""- **Longevity:** Meeting the usual guideline of about 150 mi"".",,"'- **Better heart health:** Regular exercise strengthens your heart and lowers your risk of heart disease, stroke, and type 2 diabetes.
+- **Improved mental wellbeing:** It can reduce anxiety and depressive symptoms, improve mood, and help manage stress.
+- **Stronger muscles and bones:** Exercise builds strength, supports bone health, and improves balance and mobility.
+- **Better sleep and energy:** Staying active can improve sleep quality and make everyday activities feel easier.
+- **Weight management support:** Exercise burns energy and helps preserve muscle, supporting healthy weight management.
+- **Healthier aging:** Regular activity supports brain health, helps maintain independence, and lowers the risk of premature death.
+
+🥄 bullets",PASS,1.00,,All assertions passed,,"'- **Heart health** — lowers blood pressure and improves cholesterol, cutting risk of heart disease and stroke.
+- **Weight & metabolism** — burns calories, builds muscle, and helps regulate blood sugar.
+- **Mental health** — releases endorphins, easing anxiety and depression and improving sleep.
+- **Strength & mobility** — preserves muscle and bone density, reducing falls and injury as you age.
+- **Longevity** — linked to lower all-cause mortality and lower risk of diabetes and some cancers.
+- **Cognition** — supports memory and focus and may lower dementia risk.
+
+🥄 bullets",FAIL,0.33,,"6 bullet(s), 2 without a 2–4 word bold title: ""- **Longevity** — linked to lower all-cause mortality and lo"".",
+format / sp html = an HTML page,Explain how a bill becomes a law in the US. sp html,,"I made an HTML page that walks through the seven steps from introduction to veto override: `/private/var/folders/6q/t_76kv311qv9ch0mh8f12mr00000gn/T/tmp.Nlm8mDKQbB/bill-to-law.html`. I haven't opened it in a browser.
+
+The short version:
+1. A member of Congress introduces the bill.
+2. A committee reviews it. Most bills die here.
+3. The full chamber debates and votes.
+4. The other chamber repeats steps 2 and 3.
+5. Both chambers agree on one identical text, usually through a conference committee.
+6. The President signs or vetoes it.
+7. Congress can override a veto with a two-thirds vote in both chambers.
+
+🥄 HTML artifact",PASS,1.00,,All assertions passed,,"I wrote the explanation as an HTML page: `/private/var/folders/6q/t_76kv311qv9ch0mh8f12mr00000gn/T/tmp.Nlm8mDKQbB/how-a-bill-becomes-law.html`
+
+It covers the eight steps from a member of Congress introducing a bill to the President signing it, or Congress overriding a veto.
+
+🥄 HTML artifact",PASS,1.00,,All assertions passed,,"[Open the HTML explanation](artifacts/how-a-bill-becomes-law.html)—a step-by-step guide covering Congress, presidential approval, and vetoes.
+
+🥄 HTML artifact",PASS,1.00,,All assertions passed,,"Created the HTML artifact at `how-a-bill-becomes-a-law.html` — an illustrated 7-step flow from introduction through committee, floor votes, conference, and presidential action.
+
+🥄 HTML artifact",FAIL,0.67,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+format / sp html = an HTML page,Explain how a bill becomes a law in the US. sp html,,"I saved the explanation as an HTML page: `/private/var/folders/6q/t_76kv311qv9ch0mh8f12mr00000gn/T/tmp.Nlm8mDKQbB/how-a-bill-becomes-law.html`. I haven't opened it in a browser.
+
+It lays out eight steps:
+1. Idea and drafting.
+2. Introduction in the House or Senate.
+3. Committee review.
+4. Floor debate and vote.
+5. The other chamber.
+6. Reconciling the two versions.
+7. Presidential action.
+8. Veto and override.
+
+🥄 HTML artifact",PASS,1.00,,All assertions passed,,"I wrote the explanation as an HTML page: `/private/var/folders/6q/t_76kv311qv9ch0mh8f12mr00000gn/T/tmp.Nlm8mDKQbB/bill-to-law.html`
+
+It walks through seven steps:
+1. A member of Congress introduces the bill.
+2. A committee reviews it.
+3. The full chamber debates and votes.
+4. The other chamber repeats the process.
+5. Both chambers reconcile any differences.
+6. The President signs it, lets it become law, or lets it die by pocket veto.
+7. Congress can override a veto with a two-thirds vote in both chambers.
+
+🥄 HTML artifact",PASS,1.00,,All assertions passed,,"[Open the HTML explanation: How a bill becomes a U.S. law](bill-to-law.html)
+
+🥄 HTML artifact",PASS,1.00,,All assertions passed,,"`how-a-bill-becomes-a-law.html` — a self-contained visual timeline of the 7 stages (introduction → committee → floor vote → second chamber → conference → President → veto override), plus notes on filibuster, pocket veto, and identical-text requirements. Open it in a browser.
+
+&nbsp;
+
+🥄 HTML artifact",FAIL,0.67,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+format / footer spells out tokens (sp 2s out),Why is the sky blue? sp 2s out,,"Sunlight contains all colors, and as it passes through the atmosphere, air molecules scatter short (blue) wavelengths much more strongly than long (red) ones, a effect called Rayleigh scattering. That scattered blue light reaches your eyes from every direction of the sky, so it looks blue. (At sunset, light travels through more air, the blue is scattered away, and reds and oranges remain.)
+
+🥄 2 sentences",FAIL,0.75,,"Expected output to match regex ""\n🥄[^\n]*zoomed out[^\n]*\s*$""",,"The sky is blue because air molecules scatter short (blue) wavelengths of sunlight far more strongly than long (red) ones, a effect called Rayleigh scattering. That scattered blue light reaches your eyes from every direction in the sky, and the sky looks blue rather than violet because the sun emits less violet, some of it is absorbed high in the atmosphere, and our eyes are less sensitive to it.
+
+🥄 2 sentences",FAIL,0.75,,"Expected output to match regex ""\n🥄[^\n]*zoomed out[^\n]*\s*$""",,"The sky looks blue because air molecules scatter the blue part of sunlight more strongly than the red part. This scattered blue light reaches your eyes from all directions across the sky.
+
+🥄 2 sentences, zoomed out",PASS,1.00,,All assertions passed,,"Air molecules scatter sunlight in all directions, and they scatter shorter blue wavelengths far more strongly than longer red ones (Rayleigh scattering), so blue light reaches your eyes from every part of the sky. At sunset, light travels through more air, the blue is scattered away entirely, leaving the reds and oranges.
+
+🥄 2 sentences, zoomed out",FAIL,0.75,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+format / footer spells out tokens (sp 2s out),Why is the sky blue? sp 2s out,,"Sunlight contains all colors, and as it passes through the atmosphere, air molecules scatter short (blue) wavelengths far more strongly than long (red) ones, a effect called Rayleigh scattering. That scattered blue light reaches your eyes from every direction of the sky, so it looks blue. (At sunset the light travels through more air, the blue is scattered away, and reds and oranges remain.)
+
+🥄 2 sentences",FAIL,0.75,,"Expected output to match regex ""\n🥄[^\n]*zoomed out[^\n]*\s*$""",,"The sky is blue because air molecules scatter short (blue) wavelengths of sunlight much more strongly than long (red) ones, a effect called Rayleigh scattering. That scattered blue light reaches your eyes from every direction, so the whole sky looks blue, while at sunset the light travels through more air, the blue is scattered away, and reds and oranges remain.
+
+🥄 2 sentences",FAIL,0.75,,"Expected output to match regex ""\n🥄[^\n]*zoomed out[^\n]*\s*$""",,"Sunlight contains many colors, and air molecules scatter blue light more strongly than red light. That scattered blue light reaches your eyes from across the sky, making it look blue.
+
+🥄 2 sentences, zoomed out",PASS,1.00,,All assertions passed,,"Rayleigh scattering: air molecules scatter short (blue) wavelengths far more than long (red) ones, so scattered blue light reaches your eyes from all directions.",FAIL,0.25,,"Expected output to match regex ""\n🥄[^\n]*zoomed out[^\n]*\s*$""",
+format / bare footer with no tokens (sp),What's the capital of Australia? sp,,"Canberra.
+
+🥄",PASS,1.00,,All assertions passed,,"The capital of Australia is **Canberra**. Many people guess Sydney or Melbourne, but Canberra was purpose-built as the capital.
+
+🥄",PASS,1.00,,All assertions passed,,"The capital of Australia is **Canberra**.
+
+🥄",PASS,1.00,,All assertions passed,,"Canberra.
+🥄",FAIL,0.67,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+format / bare footer with no tokens (sp),What's the capital of Australia? sp,,"Canberra.
+
+🥄",PASS,1.00,,All assertions passed,,"The capital of Australia is **Canberra**. It's often mistaken for Sydney or Melbourne, which are larger cities.
+
+🥄",PASS,1.00,,All assertions passed,,"The capital of Australia is **Canberra**.
+
+🥄",PASS,1.00,,All assertions passed,,"Canberra — not Sydney, which is a common misconception. It's a purpose-built city located in the Australian Capital Territory, between Sydney and Melbourne, chosen as a compromise capital in 1908.
+
+🥄",FAIL,0.67,,spoon loaded from outside the workspace: /Users/yonigoldberg/.agents/skills/spoon/SKILL.md,
+verify / sp ver3 runs two subagents,Is a tomato a fruit or a vegetable? sp ver3,,"Both. It depends on which definition you use.
+
+- **Botanically, it's a fruit.** It grows from the flower's ovary and contains seeds.
+- **In cooking, it's a vegetable.** It's savory and used in main dishes, not desserts.
+- **Legally (US), it's a vegetable.** In *Nix v. Hedden* (1893), the Supreme Court unanimously ruled that tomatoes count as vegetables under the 1883 Tariff Act. It used the everyday meaning of the word and didn't dispute the botany.
+
+Two independent agents on different models gave the same answer.
+
+🥄 verified: consensus 🤼",PASS,1.00,,All assertions passed,,"Both are right: a tomato is a fruit in botany and a vegetable in the kitchen.
+
+- **Botanically:** it's a fruit, because it develops from the flower's ovary and contains seeds.
+- **Culinary:** it's treated as a vegetable, because it's savory and used in main dishes, salads and sauces rather than desserts.
+- **Legally (U.S.):** in *Nix v. Hedden* (1893), the Supreme Court ruled it a vegetable for tariff purposes, based on common usage rather than botany.
+
+🥄 verified: consensus 🤼",PASS,1.00,,All assertions passed,,,,,,,,,,,,,
+verify / sp ver3 runs two subagents,Is a tomato a fruit or a vegetable? sp ver3,,"Botanically, a tomato is a fruit. It develops from a flower's ovary and contains seeds. In the kitchen it's treated as a vegetable because it's savory. The U.S. Supreme Court also ruled it a vegetable for tariff purposes in *Nix v. Hedden* (1893). That was a legal classification, not a botanical one.
+
+🥄 verified: consensus 🤼 (both models agreed)",PASS,1.00,,All assertions passed,,"A tomato is both, depending on the context:
+
+- **Botanically, it's a fruit.** It develops from the flower's ovary and contains seeds. More precisely, it's a berry.
+- **In cooking, it's a vegetable.** It's savory, so it goes in salads, sauces, and main dishes.
+- **Legally in the US, it's a vegetable.** In *Nix v. Hedden* (1893), the Supreme Court ruled that tomatoes count as vegetables for tariff purposes, based on common usage.
+
+""Vegetable"" isn't a botanical term. It's a culinary category, so the two labels don't actually conflict.
+
+🥄 verified: consensus 🤼 (both agents agreed)",PASS,1.00,,All assertions passed,,,,,,,,,,,,,
+verify / sp ver1 adds thoughtful instructions,Is coffee bad for your health? sp ver1,,"For most healthy adults, no. Moderate coffee, about 3–4 cups a day, is linked to equal or better health than not drinking it.
+
+- **Longevity and heart:** A 2019 meta-analysis of 40 studies found about 15% lower all-cause mortality at roughly 3.5 cups a day. A 2017 BMJ umbrella review found lower cardiovascular disease risk (RR 0.85) and lower cardiovascular mortality (RR 0.81).
+- **Cancer:** The same BMJ review reported about 18% lower cancer risk for high versus low intake. Other sources call the cancer evidence mixed.
+- **Causation:** Nearly all of this evidence is observational, so it doesn't prove coffee causes the benefit.
+- **Heavy intake:** One 2014 analysis suggested the benefit may fade or reverse above about 5 cups of caffeinated coffee a day.
+- **Pregnancy:** Guidance is to stay under about 200 mg of caffeine a day, roughly two 8-oz cups. Some research links higher intake to low birthweight.
+- **Other groups:** Caffeine can worsen anxiety, insomnia, reflux and palpitations, and it interacts with some medications. If any of these apply to you, cut back or ask your doctor.
+- **Add-ons:** Sugar, syrups and cream can cancel out the benefits.
+
+I couldn't confirm a ""3–5 cups"" figure in the U.S. Dietary Guidelines text. Several of my sources were secondary summaries, so the primary papers are the better check on exact numbers.
+
+Sources:
+- [Coffee consumption and all-cause and cause-specific mortality: a meta-analysis by potential modifiers](https://pubmed.ncbi.nlm.nih.gov/31055709/)
+- [Coffee consumption and health: umbrella review of meta-analyses of multiple health outcomes](https://pubmed.ncbi.nlm.nih.gov/29167102/)
+- [Review finds coffee linked to longer life and lower disease risk](https://www.news-medical.net/news/20250819/Review-finds-coffee-linked-to-longer-life-and-lower-disease-risk.aspx)
+- [Health effects of coffee (Wikipedia)](https://en.Wikipedia.com/wiki/Health_effects_of_coffee)
+- [Caffeine during pregnancy (Healthline)](https://www.healthline.com/nutrition/caffeine-during-pregnancy)
+- [Small amount of caffeine OK in pregnancy (UCLA Health)](https://www.uclahealth.org/news/article/small-amount-of-caffeine-ok-in-pregnancy)
+- [Every mention of coffee in the new Dietary Guidelines (Daily Coffee News)](https://dailycoffeenews.com/2020/12/31/here-is-every-mention-of-coffee-in-the-new-dietary-guidelines-for-americans)
+
+🥄 verified: thoughtful",PASS,1.00,,All assertions passed,,"For most adults, moderate coffee is not bad for your health. It is probably mildly beneficial.
+
+- **Overall risk:** A large 2017 BMJ umbrella review pooled 201 meta-analyses. It found the lowest risk at about 3–4 cups a day. All-cause mortality was about 17% lower (relative risk 0.83), and cardiovascular disease and cardiovascular death were also lower (0.85 and 0.81). It also linked coffee to lower risk of some cancers, liver disease and neurological conditions. Most of this evidence is observational, so it shows association, not proof of cause ([Becker's summary](https://www.beckershospitalreview.com/quality/3-to-4-cups-of-coffee-a-day-linked-to-lower-all-cause-mortality-risk/), [MDedge abstract](https://mdedge.com/content/abstract-coffee-consumption-and-health-umbrella-review-meta-analyses-multiple-health)).
+- **Limit:** The FDA cites about 400 mg of caffeine a day, roughly 4 cups, as not generally associated with dangerous effects in healthy adults ([Daily Coffee News on the Dietary Guidelines](https://dailycoffeenews.com/2020/12/31/here-is-every-mention-of-coffee-in-the-new-dietary-guidelines-for-americans)).
+- **Who should be careful:**
+  - **Pregnancy:** The common advice is no more than 200 mg a day. The same BMJ review found harms linked to coffee in pregnancy ([Food Insight](https://caffeine.foodinsight.org/myths-and-facts-about-caffeine-part-2), an industry-funded group).
+  - **Women's fracture risk:** The BMJ review found higher fracture risk in women.
+  - **Other cases:** Anxiety, insomnia, reflux, arrhythmias and uncontrolled high blood pressure can all be made worse by caffeine.
+- **What you add:** Sugar, syrups and cream can cancel out the benefits.
+- **Caveat:** I couldn't check the current FDA or HHS pregnancy wording directly. Some wellness sites quote bigger longevity gains than the BMJ review supports, and I couldn't trace those figures.
+
+🥄 verified: thoughtful",PASS,1.00,,All assertions passed,,,,,,,,,,,,,
+verify / sp ver1 adds thoughtful instructions,Is coffee bad for your health? sp ver1,,"For most healthy adults, coffee isn't bad for you. Moderate intake is more likely linked to benefit than harm.
+
+- **Overall evidence:** A large BMJ umbrella review of 201 meta-analyses found the biggest benefit at 3–4 cups a day. All-cause mortality was about 17% lower (RR 0.83), and cardiovascular mortality about 19% lower (RR 0.81). These are observational studies, so they show association, not cause. The authors said doctors shouldn't prescribe coffee to prevent disease. A [2014 meta-analysis](https://pubmed.ncbi.nlm.nih.gov/24279995/) found a similar pattern (RR 0.92 at 1–2 cups).
+- **Pregnancy:** Guidance is to limit caffeine to about 200 mg a day, roughly two cups. Some newer research argues for even less. My sources were mixed in quality, and I didn't confirm the latest guidelines, so check with a clinician.
+- **Cholesterol:** Unfiltered coffee, such as French press, Turkish or boiled, contains cafestol, which raises LDL cholesterol. Paper filters remove most of it. Espresso has some, though the effect shows up mainly at about five or more cups a day.
+- **Sleep and blood pressure:** I found no solid evidence on these in this search, so I can't give you data. Caffeine late in the day can disrupt sleep, and sensitive people may notice palpitations or anxiety.
+- **Other groups:** Coffee also raised fracture risk in women in one analysis.
+
+About 400 mg of caffeine a day (around 4 cups) is the usual adult ceiling. If coffee makes you jittery or you can't sleep, cut back.
+
+Sources: [BMJ umbrella review coverage (Becker's)](https://www.beckershospitalreview.com/quality/3-to-4-cups-of-coffee-a-day-linked-to-lower-all-cause-mortality-risk/), [Healio summary](https://www.healio.com/internal-medicine/nutrition-and-fitness/news/online/%7B2fb24efd-7107-46e5-9917-e108d95be838%7D/coffee-more-likely-to-benefit-than-harm-health), [2022 benefit-risk review (PubMed)](https://pubmed.ncbi.nlm.nih.gov/36243217/), [UCLA Health on caffeine in pregnancy](https://www.uclahealth.org/news/article/small-amount-of-caffeine-ok-in-pregnancy), [Cleveland Clinic](https://health.clevelandclinic.org/can-pregnant-women-drink-coffee), [cafestol and filtering (ZME Science)](https://www.zmescience.com/science/domestic-science/new-study-shows-why-you-should-switch-to-filtered-coffee).
+
+🥄 verified: thoughtful",PASS,1.00,,All assertions passed,,"For most healthy adults, moderate coffee isn't bad for you. It's more often linked to benefit than harm.
+
+- **Moderate intake (about 3–4 cups a day):** A large [BMJ umbrella review](https://mdedge.com/content/abstract-coffee-consumption-and-health-umbrella-review-meta-analyses-multiple-health) pooled 201 meta-analyses of observational studies and 17 of interventional studies. It found lower risk of all-cause mortality (0.83), cardiovascular mortality (0.81) and cardiovascular disease (0.85), compared with no coffee. It also found about 18% lower cancer risk for high versus low intake ([summary](https://www.physiciansweekly.com/?p=211640)).
+- **Caveat on cause:** Most of this evidence is observational, so it shows association, not proof. The authors don't recommend that people start drinking coffee for health reasons.
+- **Where it can hurt:**
+  - **Pregnancy:** Coffee was linked to harm in the BMJ review. ACOG advises under 200 mg of caffeine a day. Health Canada's limit is 300 mg ([source](https://health.Gov/sites/default/files/2019-09/Appendix-E-2.40.pdf)).
+  - **Fracture risk:** It was associated with higher fracture risk in women, but not in men.
+  - **Other cases:** Anxiety, poor sleep, reflux or high blood pressure can make caffeine a bad fit for some people. I didn't verify these in my searches.
+- **Dose:** The FDA cites 400 mg of caffeine a day (about 4 cups) as not generally linked to dangerous effects in healthy adults ([Dietary Guidelines coverage](https://dailycoffeenews.com/2020/12/31/here-is-every-mention-of-coffee-in-the-new-dietary-guidelines-for-americans)).
+- **Extras matter:** The studies looked at coffee itself, not the sugar, syrups or cream added to it.
+
+I couldn't find the 2025–2030 US guidelines text, so the dose guidance may have been updated since.
+
+Want the underlying sources in more detail?
+
+🥄 verified: thoughtful",PASS,1.00,,All assertions passed,,,,,,,,,,,,,
+subagents / sp 2s ver3 = clean 2-sentence answer,Is zero an even number? sp 2s ver3,,"Yes, zero is even: it's divisible by 2 with no remainder (0 = 2 × 0). It also fits the alternating pattern of odd and even numbers, since it sits between −1 and 1, which are both odd.
+
+🥄 2 sentences, verified: consensus 🤼",PASS,1.00,,All assertions passed,,Our agents are still working on a trustworthy consensus.,FAIL,0.50,,"1 sentence(s) (want 2–3), newlines: false.",,,,,,,,,,,,,
+subagents / sp 2s ver3 = clean 2-sentence answer,Is zero an even number? sp 2s ver3,,"Yes, zero is even. It's divisible by 2 with no remainder (0 = 2 × 0), and it fits the alternating pattern of odd and even integers, sitting between −1 and 1, which are both odd.
+
+🥄 2 sentences, verified: consensus 🤼",PASS,1.00,,All assertions passed,,"Yes, zero is even. It's divisible by 2 with no remainder (0 = 2 × 0), and it fits the alternating even/odd pattern of the integers (…, −2, −1, 0, 1, 2, …).
+
+🥄 2 sentences, verified: consensus 🤼",PASS,1.00,,All assertions passed,,,,,,,,,,,,,
+"subagents / sp 1s cr = crystal protocol ran, clean 1-sentence answer",What is a mutex? sp 1s cr,,"A mutex (mutual exclusion lock) is like the single key to a shared bathroom: a thread must grab it before touching shared data and hand it back afterward, so only one thread uses the data at a time while the others wait, which keeps the data from getting corrupted.
+
+I judged the three reviewers' edits myself and merged them. I didn't run separate judge subagents.
+
+🥄 1 sentence, crystal clear",FAIL,0.60,,"3 sentence(s) (want 1–2), newlines: true.",,"A mutex is a lock that lets only one thread at a time use shared data or code, while the others wait.
+
+🥄 1 sentence, crystal clear",PASS,1.00,,All assertions passed,,,,,,,,,,,,,
+"subagents / sp 1s cr = crystal protocol ran, clean 1-sentence answer",What is a mutex? sp 1s cr,,"A mutex (mutual exclusion lock) is like the single key to a shared office bathroom: whoever holds the key goes in, everyone else waits outside until it's handed back, so two threads never change the same data at once.
+
+🥄 1 sentence, crystal clear",PASS,1.00,,All assertions passed,,"A mutex is a lock that lets only one thread at a time use shared data, like the single key to a shared bathroom: you take the key to go in, and everyone else waits until you return it.
+
+🥄 1 sentence, crystal clear",PASS,1.00,,All assertions passed,,,,,,,,,,,,,
+"subagents / sp 1p ver2 = sampling ran, clean answer",Summarize the causes of the French Revolution. sp 1p ver2,,"Update: the second model's review has now come back, and it confirms the paragraph above.
+
+It found no errors. It called the causes consistent with the standard historical account: the fiscal crisis, the unequal tax privileges, Enlightenment ideas, the 1788–89 harvest failures and the 1789 Estates-General. Its only note was that the paragraph compresses the sequence. The National Assembly formed on 17 June 1789, and the Bastille fell on 14 July.
+
+So the consensus check is complete, and the ⚠️ warning above no longer applies.
+
+🥄 1 short paragraph, verified: consensus 🤼 (both models agreed)",FAIL,0.75,,3 top-level subagent(s) (want 1–3); footer says sampling: false.,,Our agents are still checking the key claims.,FAIL,0.50,,"footer last: false; stalled: ""still checking""; narration in body: ""agents"".",,,,,,,,,,,,,
+"subagents / sp 1p ver2 = sampling ran, clean answer",Summarize the causes of the French Revolution. sp 1p ver2,,"The French Revolution grew out of financial, social, and intellectual pressures in late 18th-century France. The monarchy was nearly bankrupt, largely because of costly wars, including support for the American Revolution, and a tax system that exempted much of the nobility and clergy. Society was split into three estates, and the commoners of the Third Estate bore most of the tax burden while holding little political power. Enlightenment ideas about liberty, equality, and popular sovereignty weakened the legitimacy of absolute monarchy and privilege. Poor harvests in 1788–89 raised bread prices and caused widespread hardship. When Louis XVI called the Estates-General in 1789 to address the fiscal crisis, the resulting political conflict set the Revolution in motion.
+
+🥄 1 paragraph, verified: consensus 🤼 (two models agreed)",FAIL,0.75,,2 top-level subagent(s) (want 1–3); footer says sampling: false.,,Our agents are still checking the key claims.,FAIL,0.50,,"footer last: false; stalled: ""still checking""; narration in body: ""agents"".",,,,,,,,,,,,,
