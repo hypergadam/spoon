@@ -22,13 +22,21 @@ With spoon, you add a tiny token like `1m` (a 1-minute read) or `ver` (verify be
 
 ## ⚡ Start in 30 seconds
 
-Type `sp`, then a token or two, then your question:
+**1. Install** with [skills.sh](https://skills.sh) (works with Claude Code, Codex, Cursor and more):
+
+```bash
+npx skills add practicajs/spoon --skill spoon
+```
+
+…or use your favorite marketplace ([Claude Code, Codex](#-install)).
+
+**2. Open your favorite AI editor** and type `sp`, then a token or two, then your question:
 
 ```
-sp 1m   why is my build slow?        → a 1-minute read
-sp 3s   what is a mutex?             → 3 sentences
-sp ver  is Node 22 LTS?              → checked before it's sent
-sp 1m cr da   should we use Redis?   → 1 minute, crystal clear, with data
+sp 1m   why is my app slow?                                 → a 1-minute read
+sp 3s   what are MCPs?                                      → 3 sentences
+sp ver  can iOS send notifications while the phone sleeps?  → checked before it's sent
+sp 1m cr da   should we move to the cloud?                  → 1 minute, crystal clear, with data
 ```
 
 Tokens can also go at the end of the message. Every answer ends with 🥄 and a short note on what your tokens did.
